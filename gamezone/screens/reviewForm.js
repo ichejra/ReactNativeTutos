@@ -91,4 +91,3 @@ export default ReviewForm;
 
 const styles = StyleSheet.create({});
 
-// a clumsy react native app, I dont code like that , for getting started purpose only
