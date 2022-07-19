@@ -1,0 +1,46 @@
+import React, { useState } from "react";
+import { TextInput, StyleSheet, Text, View, ScrollView } from "react-native";
+
+export default function App() {
+  const [people, setPeople] = useState([
+    { name: "lilly", key: 20 },
+    { name: "alia", key: 40 },
+    { name: "vass", key: 30 },
+    { name: "fafu", key: 43 },
+    { name: "cassy", key: 54 },
+    { name: "nona", key: 32 },
+  ]);
+  const [age, setAge] = useState(30);
+
+  return (
+    <View style={styles.container}>
+      <ScrollView>
+        <Text>{/* allows us to scroll */}</Text>
+        {people.map((person) => {
+          return (
+            <View key={person.key}>
+              <Text style={styles.item}>{person.name}</Text>
+            </View>
+          );
+        })}
+      </ScrollView>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    paddingTop: 40,
+    paddingHorizontal: 20,
+    // alignItems: "center",
+    // justifyContent: "center",
+  },
+  item: {
+    marginTop: 24,
+    padding: 30,
+    backgroundColor: "pink",
+    fontSize: 24,
+  },
+});
