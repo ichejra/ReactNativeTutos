@@ -6,6 +6,6 @@ ps1: for getting started purpose only 🤓
 
 ps2: I dont code like that 🤫
 
-##Usage
+## Usage
 - npm install
 - npm start
